@@ -11,10 +11,10 @@ int main()
 
     if (b == 0)
     {
-        printf("Sum: %i\n Difference: %i\n Product: %i\n Division by zero not defined /n", a+b, a-b, a*b);
+        printf("Sum: %i\nDifference: %i\nProduct: %i\nDivision by zero not defined\nModulus: %i", a+b, a-b, a*b, a%b);
         return 0;
     }
 
-    printf("Sum: %i\n Difference: %i\n Product: %i\n Division: %i\n", a+b, a-b, a*b, a/b);
+    printf("Sum: %i\nDifference: %i\nProduct: %i\nDivision: %i\nModulus: %i", a+b, a-b, a*b, a/b, a%b);
     return 0;
 }

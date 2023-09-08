@@ -38,7 +38,7 @@ int main()
                 else
                 {
                     notes == 1 ? printf("%i note of denomination %i\n", notes, denominations[i]) : 
-                             printf("%i notes of denomination %i\n", notes, denominations[i]) ;
+                                 printf("%i notes of denomination %i\n", notes, denominations[i]) ;
                     notes = 0;
                 }
             }
