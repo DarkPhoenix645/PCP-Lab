@@ -6,5 +6,6 @@ int main()
     printf("Please enter a number: ");
     scanf("%i", &a);
     
-    a % 2 == 0 ? printf("Number is even") : printf("Number is odd");
+    a % 2 == 0 ? printf("Number is even\n") : printf("Number is odd\n");
+    return 0;
 }

@@ -19,7 +19,6 @@ int main()
     if (a == 0 && b == 0 && c == 0)
     {
         printf("The given values do not constitute a quadratic equation!\n");
-        return 0;
     }
     
     if (discriminant < 0)
@@ -32,7 +31,6 @@ int main()
         printf("\n", non_root, root1);
         printf("Root 1: %f + (%f)i\n", non_root, root1);
         printf("Root 2: %f + (%f)i\n", non_root, root2);
-        return 0;
     }
     else 
     {
@@ -43,6 +41,8 @@ int main()
         printf("\n", non_root, root1);
         printf("Root 1: %f + (%f)\n", non_root, root1);
         printf("Root 2: %f + (%f)\n", non_root, root2);
-        return 0;
     }    
+
+
+    return 0;
 }

@@ -12,12 +12,14 @@ int main()
     printf("Please enter the length of third side: ");
     scanf("%i", &c);
 
-    if (a + b == c && c + a == b && b + c == a)
+    if (a + b > c && c + a > b && b + c > a)
     {
-        printf("The triangle is valid.");
+        printf("The triangle is valid.\n");
     }
     else
     {
-        printf("Invalid triangle");
+        printf("Invalid triangle\n");
     }
+
+    return 0;
 }

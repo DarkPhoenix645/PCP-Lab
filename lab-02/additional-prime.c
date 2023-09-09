@@ -16,4 +16,5 @@ int main()
     }
 
     printf("Prime number\n");
+    return 0;
 }

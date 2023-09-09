@@ -2,7 +2,6 @@
 
 int main() 
 {
-    // Basic Arithmetic
     int a, b;
     printf("Please enter the first operand: ");
     scanf("%i", &a);
@@ -11,10 +10,10 @@ int main()
 
     if (b == 0)
     {
-        printf("Sum: %i\nDifference: %i\nProduct: %i\nDivision by zero not defined\nModulus: %i", a+b, a-b, a*b, a%b);
+        printf("Sum: %i\nDifference: %i\nProduct: %i\nDivision by zero not defined\nModulus: %i\n", a+b, a-b, a*b, a%b);
         return 0;
     }
 
-    printf("Sum: %i\nDifference: %i\nProduct: %i\nDivision: %i\nModulus: %i", a+b, a-b, a*b, a/b, a%b);
+    printf("Sum: %i\nDifference: %i\nProduct: %i\nDivision: %i\nModulus: %i\n", a+b, a-b, a*b, a/b, a%b);
     return 0;
 }

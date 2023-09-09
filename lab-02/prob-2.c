@@ -1,18 +1,17 @@
 #include <stdio.h>
-#define MAX_NUMBERS 3
 
 int main() 
 {
-    int numbers[MAX_NUMBERS];
+    int numbers[3];
     int max = 0;
 
-    for (int i = 0; i < MAX_NUMBERS; i++)
+    for (int i = 0; i < 3; i++)
     {
         printf("Please enter a number: ");
         scanf("%i", &numbers[i]);
     }
     
-    for (int i = 0; i < MAX_NUMBERS; i++)
+    for (int i = 0; i < 3; i++)
     {
         if (numbers[i] > max)
         {
