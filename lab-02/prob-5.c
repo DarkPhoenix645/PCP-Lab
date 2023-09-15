@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 #define NUMBER_OF_SUBJECTS 5
 
 int main() 
@@ -22,35 +23,21 @@ int main()
     int sum = 0;
     for (int i = 0; i < NUMBER_OF_SUBJECTS; i++)
     {
-        sum += numbers[0];
+        sum += numbers[i];
     }    
 
-    int percentage = sum / NUMBER_OF_SUBJECTS;
+    float float_sum = (float) sum;
+    float float_percentage = float_sum / NUMBER_OF_SUBJECTS;
+    int percentage = (int) round(float_percentage);
 
-    if (percentage >= 90)
-    {
-        printf("Grade A\n");
-    }
-    else if (percentage >= 80)
-    {
-        printf("Grade B\n");
-    }
-    else if (percentage >= 70)
-    {
-        printf("Grade C\n");
-    }
-    else if (percentage >= 60)
-    {
-        printf("Grade D\n");
-    }
-    else if (percentage >= 40)
-    {
-        printf("Grade E\n");
-    }
-    else
-    {
-        printf("Fail\n");
-    }
+    printf("Percentage obtained: %.2f%%\n", float_percentage);
+
+    if (percentage >= 90) { printf("Grade A\n"); }
+    else if (percentage >= 80) { printf("Grade B\n"); }
+    else if (percentage >= 70) { printf("Grade C\n"); }
+    else if (percentage >= 60) { printf("Grade D\n"); }
+    else if (percentage >= 40) { printf("Grade E\n"); }
+    else { printf("Fail\n"); }
 
     return 0;
 }

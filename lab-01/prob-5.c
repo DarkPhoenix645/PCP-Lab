@@ -3,12 +3,12 @@
 int main() 
 {
     // Fahrenheit --> Celsius conversion
-    int fahrenheit, celsius;
+    float fahrenheit, celsius;
     printf("Please enter the temp in Fahrenheit: ");
-    scanf("%i", &fahrenheit);
+    scanf("%f", &fahrenheit);
 
-    celsius = (fahrenheit - 32) * 5/9;
+    celsius = (fahrenheit - 32.00) * (5/9.00);
 
-    printf("Temp in celsius: %i\n", celsius);
+    printf("Temp in celsius: %.2f\n", celsius);
     return 0;
 }

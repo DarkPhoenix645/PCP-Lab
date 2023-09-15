@@ -29,8 +29,8 @@ int main()
         float non_root = (-1.00 * b) / (2.00 * a);
 
         printf("\n", non_root, root1);
-        printf("Root 1: %f + (%f)i\n", non_root, root1);
-        printf("Root 2: %f + (%f)i\n", non_root, root2);
+        printf("Root 1: %.2f + (%.4f)i\n", non_root, root1);
+        printf("Root 2: %.2f + (%.4f)i\n", non_root, root2);
     }
     else 
     {
@@ -39,8 +39,8 @@ int main()
         float non_root = (-1.00 * b) / (2.00 * a);
 
         printf("\n", non_root, root1);
-        printf("Root 1: %f + (%f)\n", non_root, root1);
-        printf("Root 2: %f + (%f)\n", non_root, root2);
+        printf("Root 1: %.2f\n", non_root + root1);
+        printf("Root 2: %.2f\n", non_root + root2);
     }    
 
 
