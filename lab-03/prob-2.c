@@ -2,18 +2,19 @@
 
 int main() 
 {
-    int no_of_lines;
-    printf("How many lines of the pattern do you want? ");
-    scanf("%d", &no_of_lines);
+    int sum = 0, n;
+    printf("Enter the upper limit ");
+    scanf("%d", &n);
     
-    for (int i = 0; i < no_of_lines; i++)
+    for (int i = 1; i < n; i++)
     {
-        for (int j = 0; j < i + 1; j++)
+        if (i % 30 == 0)
         {
-            printf("%d ", i + 1);
+            printf("%d\n", i);
+            sum += i;
         }
-        printf("\n");
     }
 
+    printf("Sum: %d\n", sum);
     return 0;
 }

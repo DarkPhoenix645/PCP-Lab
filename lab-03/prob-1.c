@@ -2,18 +2,19 @@
 
 int main() 
 {
-    int no_of_lines;
-    printf("How many lines of the pattern do you want? ");
-    scanf("%d", &no_of_lines);
+    int a;
+    printf("Please enter a number: ");
+    scanf("%i", &a);
     
-    for (int i = 0; i < no_of_lines; i++)
+    for (int i = 2; i < a; i++)
     {
-        for (int j = 0; j < i + 1; j++)
-        {
-            printf("*");
+        if (a % i == 0) 
+        { 
+            printf("Composite number\n"); 
+            return 0;
         }
-        printf("\n");
     }
 
+    printf("Prime number\n");
     return 0;
 }
