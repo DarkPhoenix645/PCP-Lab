@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "string": "c",
-        "format": "c"
+        "format": "c",
+        "cs50.h": "c",
+        "stdio.h": "c",
+        "ctype.h": "c"
     }
 }
