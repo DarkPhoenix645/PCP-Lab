@@ -11,6 +11,7 @@ ABV-IIITM
 // This program uses a function get_string from the CS50 library of helper functions. The source code for the CS50 
 // library can be found here: https://github.com/cs50/libcs50 and has been used under a GPLv3 license
 
+#include <cs50.h>
 #include <ctype.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -148,8 +149,7 @@ string get_guess(int wordsize)
     // Ensure correct length input
     do
     {
-        printf("Input a %i-letter word: ", wordsize);
-        scanf("%s", guess);
+        get_string("Input an %i-letter word: ", wordsize);
         len = strlen(guess);
     }
     while (len != wordsize);
