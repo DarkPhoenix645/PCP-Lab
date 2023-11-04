@@ -3,7 +3,7 @@
 Author Info
 ===================
 Nilanjan B. Mitra
-01 November 2023
+04 November 2023
 2023IMG-039
 ABV-IIITM
 
@@ -17,12 +17,22 @@ typedef char* string;
 string valid[] = {"selection", "bubble", "insertion"};
 
 void sortHandler(int algoIndex);
+void searchHandler(int arr[], int size);
 void selectionSort(int arr[], int size);
 void bubbleSort(int arr[], int size);
 void insertionSort(int arr[], int size);
+int binarySearch(int arr[], int left, int right, int element);
 void printArr(int arr[], int size, string message);
 
 int main (int argc, char *argv[]) {
+    // Printing Author Info
+    printf("Author Info\n");
+    printf("===================\n");
+    printf("Nilanjan B. Mitra\n");
+    printf("04 November 2023\n");
+    printf("2023IMG-039\n");
+    printf("ABV-IIITM\n\n\n");
+
     if (argc != 2)
     {
         printf("Invalid Usage\n");
@@ -110,9 +120,23 @@ void sortHandler(int algoIndex)
     printf("Algorithm used: %s\n", valid[algoIndex]);
     printf("Time taken (ms): %.4f\n", time_taken_ms);
 
+    searchHandler(arr, size);
+
     return;
 }
 
+void searchHandler(int arr[], int size)
+{
+    int element;
+    printf("\nEnter element to search for in the sorted array: ");
+    scanf("%d", &element);
+
+    int index = binarySearch(arr, 0, size - 1, element);
+    if (index == -1) { printf("Element %d cannot be found in the sorted array.\n", element); }
+    else { printf("Element %d is at index %d in the sorted array.\n", element, index); }
+
+    return;
+}
 
 void selectionSort(int arr[], int size)
 {
@@ -167,6 +191,19 @@ void insertionSort(int arr[], int size)
     }
 
     return;
+}
+
+
+int binarySearch(int arr[], int left, int right, int element)
+{
+    if (right >= left)
+    {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == element) { return mid; }
+        if (arr[mid] > element) { return binarySearch(arr, left, mid - 1, element); }
+        return binarySearch(arr, mid + 1, right, element);
+    }
+    return -1;
 }
 
 void printArr(int arr[], int size, string message)
